@@ -1,53 +1,81 @@
 html {
-    font-size: 10px;
-    background-image: url(/background.jpg);
-    background-size: cover;
-    background-position: center;
-  }
-  
-  body,
-  html {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-  }
-  
-  .keys {
-    display: flex;
-    flex: 1;
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .key {
-    border: 0.4rem solid black;
-    border-radius: 0.5rem;
-    margin: 1rem;
-    font-size: 1.5rem;
-    padding: 1rem 0.5rem;
-    transition: all 0.07s ease;
-    width: 10rem;
-    text-align: center;
-    color: white;
-    background: rgba(0, 0, 0, 0.4);
-    text-shadow: 0 0 0.5rem black;
-  }
-  
-  .playing {
-    transform: scale(1.3);
-    border-color: #ffc600;
-    box-shadow: 0 0 1rem #ffc600;
-  }
-  
-  kbd {
-    display: block;
-    font-size: 4rem;
-  }
-  
-  .sound {
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-    color: #ffc600;
-  }
+  font-size: 10px;
+  background-image: url(/background.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  /* overflow: hidden; */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  /* flex: 1; */
+  min-height: 95vh;
+  align-items: center;
+  justify-content: center;
+  row-gap: 40px;
+}
+
+.keys {
+  display: flex;
+}
+
+.key {
+  border: 0.4rem solid black;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem 0.5rem;
+  transition: all 0.07s ease;
+  width: 10rem;
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  text-shadow: 0 0 0.5rem black;
+}
+
+.playing {
+  transform: scale(1.3);
+  border-color: #ffc600;
+  box-shadow: 0 0 1rem #ffc600;
+}
+
+kbd {
+  display: block;
+  font-size: 4rem;
+}
+
+.sound {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #ffc600;
+}
+
+#playBtn {
+  height: 45px;
+  width: 120px;
+  background: #ffc800dc;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 7px;
+  box-shadow: 1px 1px 1px 1px #5e5228;
+}
+#playBtn:hover {
+  width: 121px;
+  background-color: #ffc800;
+}
+
+#playBtn:active {
+  transform: translateY(1px);
+}
