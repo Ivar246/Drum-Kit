@@ -8,6 +8,7 @@ function playSound(keyCode) {
   const associateKey = document.querySelector(`div[data-key="${keyCode}"]`);
   audio.currentTime = 0;
   audio.play();
+  console.log(associateKey);
   associateKey.classList.add("playing");
   setTimeout(() => {
     associateKey.classList.remove("playing");
@@ -21,6 +22,7 @@ playBtn.onclick = function (e) {
   playing = true;
   setInterval(() => {
     const randomIndex = Math.floor(Math.random() * music.length);
+    console.log(randomIndex);
     const keyCode = music[randomIndex];
     playSound(keyCode);
   }, 200);

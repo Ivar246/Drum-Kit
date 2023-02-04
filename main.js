@@ -5,13 +5,17 @@ function playSound(e) {
   audio.currentTime = 0;
   audio.play();
   associateKey.classList.add("playing");
+
+  setTimeout(() => {
+    associateKey.classList.remove("playing");
+  }, 200);
 }
 
-const keys = document.querySelectorAll(".key");
+// const keys = document.querySelectorAll(".key");
 
-function removeTransition(e) {
-  const associateKey = document.querySelector(`div[data-key="${e.keyCode}"]`);
-  associateKey.classList.remove("playing");
-}
-window.addEventListener("keyup", removeTransition);
+// function removeTransition(e) {
+//   const associateKey = document.querySelector(`div[data-key="${e.keyCode}"]`);
+//   associateKey.classList.remove("playing");
+// }
+// window.addEventListener("keyup", removeTransition);
 window.addEventListener("keydown", playSound);
